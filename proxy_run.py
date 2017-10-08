@@ -8,7 +8,7 @@ from proxys.httpsdaili import HTTPSDaili
 from proxys.nyloner import NYProxy
 from proxys.proxyhttp_net import ProxyNet
 import proxy_config
-from  proxy_config import REDIS_COMM, HTTP_KEY, HTTPS_KEY
+from  proxy_config import REDIS_COMM, HTTP_KEY, HTTPS_KEY, MAX_VOLUME
 from importlib import reload
 
 proxy_objs = [FreeProxy(), CNProxy(), GatherProxy(), HTTPSDaili(), NYProxy(), ProxyNet()]

@@ -29,7 +29,7 @@ def wash_proxy(proxy_type = 0):
             store_num = REDIS_COMM.llen(redis_key)
             print("{}检验失败,库中还有{}个".format(proxy_str,store_num))
             if store_num < min_num:
-                time.sleep(100)
+                time.sleep(proxy_config.OVER_MIN_WAITTIME)
 
 
 

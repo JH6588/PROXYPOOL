@@ -3,11 +3,11 @@ import lxml.html
 import proxy_config
 from urllib.parse import  urlparse
 from importlib import reload
-from proxy_config import DEFAULT_BAD_KEYWORD,DEFAULT_JUDGE_URLS,DEFAULT_KEYWORD,PROXY_TIMEOUT,DEFAULT_ENCODING
+from proxy_config import DEFAULT_BAD_KEYWORD,DEFAULT_JUDGE_URLS,DEFAULT_KEYWORD,PROXY_TIMEOUT
 import random
 
 
-
+DEFAULT_ENCODING = "utf8"
 DEFAULT_HEADERS= {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) '
                   'Chrome/44.0.2403.130 Safari/537.36'}
