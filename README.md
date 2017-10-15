@@ -13,7 +13,7 @@
 
 ## api配置
 -  可设置缓存时间 *cache_time*  和一次性请求个数 *proxy_num* 
--  比如 直接 *GET* http://host:port/proxy/http/100将返回 100个 http的ip
+-  比如 直接 *GET* http://host:port/proxy/http/100 将返回100个 http的ip
 -  如果结合我前面 [SimpleDistributed-Spider](https://github.com/summerlove66/SimpleDistributed-Spider) 来用的话
 需将cache_time =0 
 
