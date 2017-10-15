@@ -19,10 +19,10 @@ def wash_proxy(proxy_type = 0):
         proxy_str = proxy.decode()
         ip ,port =proxy_str.split(':')
         new_proxy_config =reload(proxy_config)
-        t = new_proxy_config.PROXY_TIMEOUT
+        proxy_timeout = new_proxy_config.PROXY_TIMEOUT
         min_num = new_proxy_config.MIN_NUM
-       # print(t,min_num,"----------------")
-        if P.get_anonymous(ip,port,):
+       # print(proxy_timeout,min_num,"----------------")
+        if P.get_anonymous(ip,port,timeout= proxy_timeout):
             REDIS_COMM.lpush(redis_key,proxy_str)
             print("{}检验通过".format(proxy_str))
         else:
@@ -35,7 +35,7 @@ def wash_proxy(proxy_type = 0):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) >1 and sys.argv[1] =="https":
+    if len(sys.argv) >1 and sys.argv[1] =="https":  # python  proxy_wash.py https  执行抓取https proxy
         wash_proxy(1)
     else:
-        wash_proxy(0)
+        wash_proxy(0) #默认抓取http proxy
