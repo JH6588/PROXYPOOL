@@ -35,13 +35,14 @@ def proxy_runner(proxy_type=0):
             if store_num > max_volume:
                 raise  Exception
             if store_num > max_num:
-                print("wait", over_max_waittime)
+                print("现IP数量: {} , 超过 MAX_VOLUME: {} , "
+                      " 等待 MAX_WAITTIME:  {}".format(store_num ,max_num ,over_max_waittime))
                 time.sleep(over_max_waittime)
             try:
                 obj.get_http()
             except:
                 pass
-        print("wait:", round_timewait)
+        print("等待 RUNOUND_TIMEWAIT: {}".format(round_timewait))
         time.sleep(round_timewait)
 
 

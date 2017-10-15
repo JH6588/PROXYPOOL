@@ -1,6 +1,6 @@
 import  redis
 
-REDIS_POOL = redis.ConnectionPool(host='xxx.xxx.xxx.xxx', db=0, password='yyyy') #根据自身配置写
+REDIS_POOL = redis.ConnectionPool(host='xxxxx', db=0, password='xxxx') #根据自身配置写
 REDIS_COMM = redis.StrictRedis(connection_pool= REDIS_POOL)
 
 
@@ -10,8 +10,8 @@ HTTPS_KEY = "https_proxy" # https proxy  redis 的队列name
 PROXY_TIMEOUT = 45  # 抓取爬虫网站的超时时间
 
 
-MIN_NUM = 666 # IP池 内低于 MIN_NUM  时，清洗线程将暂停OVER_MIN_WAITTIME
-MAX_NUM =999 # IP池内数量高于MAX_NUM 时,抓取线程将 暂停 OVER_MAX_WAITTIME
+MIN_NUM = 888# IP池 内低于 MIN_NUM  时，清洗线程将暂停OVER_MIN_WAITTIME
+MAX_NUM =2000 # IP池内数量高于MAX_NUM 时,抓取线程将 暂停 OVER_MAX_WAITTIME
 MAX_VOLUME =20000  #高于最大容量时 抓取线程将终止
 OVER_MAX_WAITTIME = 300
 OVER_MIN_WAITTIME = 100

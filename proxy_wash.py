@@ -21,7 +21,7 @@ def wash_proxy(proxy_type = 0):
         new_proxy_config =reload(proxy_config)
         t = new_proxy_config.PROXY_TIMEOUT
         min_num = new_proxy_config.MIN_NUM
-        print(t,min_num,"----------------")
+       # print(t,min_num,"----------------")
         if P.get_anonymous(ip,port,):
             REDIS_COMM.lpush(redis_key,proxy_str)
             print("{}检验通过".format(proxy_str))
